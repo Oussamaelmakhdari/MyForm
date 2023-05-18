@@ -1,0 +1,42 @@
+[
+    {
+      "id": 1,
+      "Materiel": "Ordinateur",
+      "Type": "Hp",
+      "NSerie": "333-962-7516",
+      "Remarques": "Bonne etat",
+      "Mp":"12345"
+    },
+    {
+      "id": 2,
+      "Materiel": "Tablette",
+      "Type": "Samsung",
+      "NSerie": "333-962-7218",
+      "Remarques": "Affficheur damager",
+      "Mp":"12345"
+    },
+    {
+      "id": 3,
+      "Materiel": "Telephone",
+      "Type": "Iphone 6",
+      "NSerie": "333-962-5555",
+      "Remarques": "batterie morte",
+      "Mp":"12345"
+    },
+    {
+      "id": 4,
+      "Materiel": "carte sim",
+      "Type": "inwi",
+      "NSerie": "0405060203",
+      "Remarques": "Bonne etat",
+      "Mp":"12345"
+    },
+    {
+      "id": 5,
+      "Materiel": "Modem",
+      "Type": "Maroc telecom",
+      "NSerie": "333-962-7516",
+      "Remarques": "Bonne etat",
+      "Mp":"12345"
+    }
+  ]
