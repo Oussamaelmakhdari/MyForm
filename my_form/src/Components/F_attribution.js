@@ -1,33 +1,46 @@
 import React from 'react';
-import { Navigate } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import '../App.css';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import AttribRow from './layout/AttribRow';
+
 function F_attribution() {
 
-  const [goToattribu, setgoToattribu]=useState(false);
-  const [customer, setCustomer]=useState([]);  
+  // const [goToattribu, setgoToattribu]=useState(false);
+  const [employer, setemployer]=useState([]);  
 
   useEffect(()=>{
-    getCustomer();
-    },[]);  
+    getemployer();
+  },[]);  
 
-  const getCustomer=()=>{
-    axios.get("http://localhost:8080/customers").then(data=>{
-      setCustomer(data.data);
+  const getemployer=()=>{
+    axios.get("http://localhost:8080/employers").then(data=>{
+      let emp = data.data;
+      setemployer(emp.map(d=>{
+       return {
+         select:false,
+         id:d.id,
+         name:d.name,
+         material:d.material,
+         type:d.type,
+         nserie:d.nserie,
+         remarque:d.remarque
+       }
+      }));
     }).catch(err=>alert(err));
   }
 
-  if(goToattribu){
-    return <Navigate to="/AttributionImp"/>
-  }
+  // if(goToattribu){
+  //   return <Navigate to="/AttributionImp"/>
+  // }
 
   return (
   <div className="F_attribution">
     <header className="F_attribution">
-          <h1> Formulaire d'attribution </h1>
     </header>
+    <Link to='/addAtt'><button className="recub">Ajouter Demandeur</button></Link>
+
       {/* <div>
       <h4> Ordinateur :</h4>  <br/>
       <input type='checkbox' value='op'/> Ordinateur Portable 
@@ -63,20 +76,25 @@ function F_attribution() {
 <table className="table">
   <thead>
     <tr>
-      <th scope="col">Select</th>
-      <th scope="col">Ordinateur</th>
-      <th scope="col">Accecoir_Ordinateur</th>
-      <th scope="col">Telephone</th>
-      <th scope="col">Accecoir_Telephone</th>
+      <th scope="col">Nom et Prenom</th>
+      <th scope="col">Materiel	</th>
+      <th scope="col">Type</th>
+      <th scope="col">Numero de serie</th>
+      <th scope="col">Remarques</th>
+      <th scope="col">Editer</th>
+      <th scope="col">Imprimer</th>
     </tr>
   </thead>
   <tbody>   
-    <AttribRow customer={customer}/>
+    <AttribRow employer={employer}
+    setemployer={setemployer}
+    />
   </tbody>
    </table>
-    <button  onClick={()=>{setgoToattribu(true)}}> Enregistrer </button>
     </div>
   );
 }
+
+
 
 export default F_attribution; 

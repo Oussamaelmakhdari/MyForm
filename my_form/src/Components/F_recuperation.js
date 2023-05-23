@@ -19,7 +19,7 @@ function F_recuperation() {
   const [goToattribu, setgoToattribu]=useState(false);
 
   if(goToattribu){
-    return <Navigate to="/recuImp"/>
+    return <Navigate to="/RecuImp"/>
   }
   
   const handleAddFormChange = (event)=>{
