@@ -42,7 +42,7 @@ function Editemployer() {
         }>
         <div className="form-group">
             <label >Employer ID : {stateCust.id}</label>
-            <input type="text" onchange={ (e)=>{
+            <input type="text" onChange={ (e)=>{
                     let value = e.target.value;
                     setstateCust({name:value});
                 }
@@ -52,7 +52,7 @@ function Editemployer() {
         <div className="form-group">
 
             <label >Material {stateCust.id}</label>
-            <input type="text" value={stateCust.material} onchange={ e=>{
+            <input type="text" value={stateCust.material} onChange={ e=>{
                     let value = e.target.value;
                     setstateCust({material:value});
                 }
@@ -67,7 +67,7 @@ function Editemployer() {
         </div>
         <div className="form-group">
             <label >Employer ID : {stateCust.id}</label>
-            <input type="text" value={stateCust.type} onchange={ e=>{
+            <input type="text" value={stateCust.type} onChange={ e=>{
                     let value = e.target.value;
                     setstateCust({type:value});
                 }
@@ -75,7 +75,7 @@ function Editemployer() {
             } className="form-control form-control-sm"/>
         </div><div className="form-group">
             <label >Employer ID : {stateCust.id}</label>
-            <input type="text" value={stateCust.nserie} onchange={ e=>{
+            <input type="text" value={stateCust.nserie} onChange={ e=>{
                     let value = e.target.value;
                     setstateCust({nserie:value});
                 }
@@ -83,7 +83,7 @@ function Editemployer() {
             } className="form-control form-control-sm"/>
         </div><div className="form-group">
             <label >Employer ID : {stateCust.id}</label>
-            <input type="text" value={stateCust.remarque} onchange={ e=>{
+            <input type="text" value={stateCust.remarque} onChange={ e=>{
                     let value = e.target.value;
                     setstateCust({remarque:value});
                 }
