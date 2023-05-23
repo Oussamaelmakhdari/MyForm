@@ -3,7 +3,8 @@ import Home from "./Components/Home";
 import F_attribution from "./Components/F_attribution";
 import F_recuperation from "./Components/F_recuperation";
 import AttributionImp from './Components/Impression/AttributionImp';
-import recuImp from './Components/Impression/recuImp';
+import AddAttribueur from './Components/AddEmployers/AddAttribueur';
+import Editemployer from './Components/EditEmployer/Editemployer';
 import React from 'react';
 import Header from './Components/layout/Header';
   
@@ -18,7 +19,8 @@ function App() {
           <Route path="/F_attribution" element={<F_attribution/>}/>
           <Route path="/F_recuperation" element={<F_recuperation/>}/> 
           <Route path="/AttributionImp" element={<AttributionImp/>}/> 
-          <Route path="/recuImp" element={<recuImp/>}/> 
+          <Route path="/addAtt" element={<AddAttribueur/>}/>
+          <Route path="/editAtt/:id" element={<Editemployer/>}/>
         </Routes>
       </Router>       
     </div>

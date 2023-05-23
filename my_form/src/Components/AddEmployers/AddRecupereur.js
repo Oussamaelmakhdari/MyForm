@@ -1,11 +1,11 @@
 import React from 'react'
 
-function RecuImp() {
+function AddRecupereur() {
   return (
     <div>
-      Hi
+      
     </div>
   )
 }
 
-export default RecuImp
+export default AddRecupereur
