@@ -51,22 +51,16 @@ function Editemployer() {
         </div>
         <div className="form-group">
 
-            <label >Material {stateCust.id}</label>
+            <label >Material</label>
             <input type="text" value={stateCust.material} onChange={ e=>{
                     let value = e.target.value;
                     setstateCust({material:value});
                 }
                         
             } className="form-control form-control-sm"/>
-            <select multiple class="form-control" id="exampleFormControlSelect2">
-            <option>Ordinateur</option>
-            <option>Téléphone</option>
-            <option>Accessoires de l’ordinateur </option>
-            <option>Accessoires du téléphone </option>
-            </select>
         </div>
         <div className="form-group">
-            <label >Employer ID : {stateCust.id}</label>
+            <label >Type </label>
             <input type="text" value={stateCust.type} onChange={ e=>{
                     let value = e.target.value;
                     setstateCust({type:value});
@@ -74,7 +68,7 @@ function Editemployer() {
                         
             } className="form-control form-control-sm"/>
         </div><div className="form-group">
-            <label >Employer ID : {stateCust.id}</label>
+            <label >Numero de serie </label>
             <input type="text" value={stateCust.nserie} onChange={ e=>{
                     let value = e.target.value;
                     setstateCust({nserie:value});
@@ -82,7 +76,7 @@ function Editemployer() {
                         
             } className="form-control form-control-sm"/>
         </div><div className="form-group">
-            <label >Employer ID : {stateCust.id}</label>
+            <label >Reamrques </label>
             <input type="text" value={stateCust.remarque} onChange={ e=>{
                     let value = e.target.value;
                     setstateCust({remarque:value});
