@@ -1,5 +1,7 @@
 import React from 'react'
 import axios from 'axios';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 function AddAttribueur() {
     const submit= e =>{
         let name=e.target[0].value;
@@ -24,12 +26,27 @@ function AddAttribueur() {
         console.log(d);
         }).catch(err=>alert(err)); 
     }
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        
+        // Submit logic here
+        
+        // Show notification after successful submission
+        toast.success('Employer Ajouter avec succes', {
+          position: toast.POSITION.TOP_CENTER
+        });
+      }
+
+
+
     
   return (
     <div className="container my-3">
         <form onSubmit={(e)=>{
         e.preventDefault();
         submit(e);
+        handleSubmit(e);
     }}>
         <div className="form-group">
             <label >Nom Complet </label>
@@ -58,6 +75,7 @@ function AddAttribueur() {
         </div>
         <button type="submit" value='submit' className="btn btn-primary btn-sm">Ajouter</button>
       </form>
+      <ToastContainer />
     </div>
   )    
 }

@@ -5,6 +5,8 @@ import { useParams } from 'react-router-dom';
 import { Location } from 'react-router';
 import QueryString from 'qs';
 import { useLocation } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 function Editemployer() {
@@ -23,28 +25,58 @@ function Editemployer() {
         .then(d=>{
             console.log(d);
             let employer = d.data;
-            setstateCust(employer)//.map(data=>{return {
-            //     name:data.name, 
-            //     material:data.material,
-            //     type:data.type,
-            //     nserie:data.nserie,
-            //     remarque:data.remarque
-            // }
-            // }));
-        })
-        .catch(err=>alert(err))
+            setstateCust({
+                id:employer.id,
+                name:employer.name, 
+                material:employer.material,
+                type:employer.type,
+                nserie:employer.nserie,
+                remarque:employer.remarque
+            });
+        }).catch(err=>alert(err));
     }
+
+    const putEmployer=(e)=>{
+        axios.put(`http://localhost:8080/employer/${stateCust.id}`, stateCust)
+        .then(d=>{
+            console.log(d);
+            }).catch(err=>alert(err));
+    }
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        
+        // Submit logic here
+        
+        // Show notification after successful submission
+        toast.success('Employer edite avec succes', {
+          position: toast.POSITION.TOP_CENTER
+        });
+      }
+
+
+
 
     return (
     <div className='container my-3'>
        <form onSubmit={e=>
-        {e.preventDefault()}
+        {e.preventDefault();
+            putEmployer(e);
+            handleSubmit(e);
+        }
         }>
         <div className="form-group">
             <label >Employer ID : {stateCust.id}</label>
             <input type="text" onChange={ (e)=>{
-                    let value = e.target.value;
-                    setstateCust({name:value});
+                        let value = e.target.value;
+                        setstateCust({
+                        name:value,
+                        id:stateCust.id,
+                        material:stateCust.material,
+                        type:stateCust.type,
+                        remarque:stateCust.remarque,
+                        nserie:stateCust.nserie,
+                    });
                 }
                         
             } value={stateCust.name}  className="form-control form-control-sm"/>
@@ -54,7 +86,15 @@ function Editemployer() {
             <label >Material</label>
             <input type="text" value={stateCust.material} onChange={ e=>{
                     let value = e.target.value;
-                    setstateCust({material:value});
+                    setstateCust({
+                        material:value,
+                        id:stateCust.id,
+                        name:stateCust.name,
+                        type:stateCust.type,
+                        nserie:stateCust.nserie,
+                        remarque:stateCust.remarque,
+
+                    });
                 }
                         
             } className="form-control form-control-sm"/>
@@ -63,15 +103,28 @@ function Editemployer() {
             <label >Type </label>
             <input type="text" value={stateCust.type} onChange={ e=>{
                     let value = e.target.value;
-                    setstateCust({type:value});
+                    setstateCust({
+                        type:value,
+                        id:stateCust.id,
+                        name:stateCust.name,
+                        material:stateCust.material,
+                        nserie:stateCust.nserie,
+                        remarque:stateCust.remarque,
+                    });
                 }
                         
-            } className="form-control form-control-sm"/>
+            } className="form-control form-c ontrol-sm"/>
         </div><div className="form-group">
             <label >Numero de serie </label>
             <input type="text" value={stateCust.nserie} onChange={ e=>{
                     let value = e.target.value;
-                    setstateCust({nserie:value});
+                    setstateCust({
+                        nserie:value,
+                        id:stateCust.id,
+                        name:stateCust.name,
+                        material:stateCust.material,
+                        type:stateCust.type,
+                        remarque:stateCust.remarque});
                 }
                         
             } className="form-control form-control-sm"/>
@@ -79,16 +132,26 @@ function Editemployer() {
             <label >Reamrques </label>
             <input type="text" value={stateCust.remarque} onChange={ e=>{
                     let value = e.target.value;
-                    setstateCust({remarque:value});
+                    setstateCust({remarque:value,
+                        id:stateCust.id,
+                        name:stateCust.name,
+                        type:stateCust.type,
+                        material:stateCust.material,
+                        nserie:stateCust.nserie
+                    });
                 }
                         
             } className="form-control form-control-sm"/>
         </div>
         <button type="submit" className="btn btn-primary btn-sm">Editer</button>
         </form>
+        <ToastContainer />
     </div>
   )
 }
+
+
+
 
 
 
