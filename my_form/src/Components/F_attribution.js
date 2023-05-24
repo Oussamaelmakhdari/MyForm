@@ -60,7 +60,7 @@ function F_attribution() {
     //   position: toast.POSITION.TOP_CENTER
    
   }
-
+  
   return (
   <div className="F_attribution">
     <header className="F_attribution">
