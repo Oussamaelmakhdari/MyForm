@@ -33,7 +33,7 @@ function Editemployer() {
                 nserie:employer.nserie,
                 remarque:employer.remarque,
                 departement:employer.departement,
-                date:new Date(employer.date).toISOString().split("T")[0],
+                date:new Date(employer.date).toISOString().split("T")[0]
             });
         }).catch(err=>alert(err));
     }

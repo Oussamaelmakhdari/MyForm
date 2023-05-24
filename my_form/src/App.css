@@ -492,7 +492,7 @@ form * {
   justify-content: center;
  /* align-items: flex-end;
   min-height: 300vh;*/
-  position: absolute;
+  /* position: absolute; */
   /* bottom: 0;  */
   padding-top: 89.5rem;
  
@@ -509,5 +509,32 @@ form * {
   min-height: 100vh;
 } */
 
+.champapp{
+  position: relative;
+  color: gray;
+}
 
+.champapp::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px; /* Adjust the position of the line */
+  width: 600%;
+  height: 2px; /* Adjust the thickness of the line */
+  background-color: gray;
+}
+.tabform{
+  
+}
+.thf{
+  background-color: gray;
+}
+.tdf{
+  border: 1px solid #ffffff;
+  text-align: left;
+  padding: 5px;
+  font-size: 20px;
+  margin-right: 20;
+  background-color: rgb(220, 210, 210);
+}
 

@@ -33,41 +33,142 @@ function AttributionImp() {
               material:employer.material,
               type:employer.type,
               nserie:employer.nserie,
-              remarque:employer.remarque
+              remarque:employer.remarque,
+              deprtment:employer.department,
+              date:new Date(employer.date).toISOString().split("T")[0]
           });
       }).catch(err=>alert(err));
   }
+
   return (
     <div className="">
-      <div>
-
-
       <div className="containerAtt">
           <img src={img} alt="My Image" className="top-left-image" style={{ width: '300px', height: 'auto' }} />
        </div>  
        <div className="container-emp">
           Employer ID : {stateCust.id}
        </div>  
-       <div className="titleImp"><h1 className="phrase" style={{ color:'darkgreen'}}>Formulaire d'attribution du matériel (v 1.0)</h1><h6 className="under-title">Quality Bean Morocco</h6><br/><br/>
+       <div className="titleImp"><h1 className="phrase" style={{ color:'darkgreen'}}>Formulaire d'attribution du matériel (v 1.0)</h1>
+       <h6 className="under-title"> Quality Bean Morocco </h6>
+       <span className="champapp"><h5>Service Informatique</h5></span><br/>
+        <h1 className="scndp" style={{ color:'darkgreen',
+      }}>Formulaire d'attribution du matériel (v 1.0)</h1>
+       <h6 className="under-title"> Quality Bean Morocco </h6> 
+       <br/>        
+       <br/>        
+       <br/>        
+       <br/>        
+       <br/>        
+       <br/>        
+       <br/>        
 
-       </div>  
-
-      </div><br/>
-
-      <div>
-        
-        
-        
-        
-        
-      </div>
+       <span className="champapp"><h3>Champ d'application</h3></span><br/>
+       <p>Ce formulaire décrit le matériel attribué aux nouveaux utilisateurs.</p><br/>
+       <br/>
+       <br/>
+       <br/>
+       <span className="champapp"><h3>Responsabiliter</h3></span><br/>
 
 
-      
+      <table className="tabform">
+      <thead>
+      <tr className="trf">
+          <th className="thf">Fonctions</th>
+          <th className="thf">Responsabilités</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+          <tr className="trf">
+            <td className="tdf">Administrateur des lieux de travail</td>
+            <td className="tdf">Déterminer les caractéristiques du matériel qui sera utilisé par le nouvel utilisateur</td>
+          </tr>
+          <tr className="trf">
+          <td className="tdf">Service informatique</td>
+          <td className="tdf">Approuver le matériel choisi dans le formulaire.
+              Lier le matériel à l'utilisateur dans la base de données GLPI après achat
+            </td>
+          </tr>
+          <tr className="trf">
+            <td className="tdf">Service achat</td>
+            <td className="tdf">Achat du matériel Signer le bon de sortie lors de la livraison du matériel à l'utilisateur
+          </td>
+          </tr>
+      </tbody>
+    </table>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+
+    <span className="champapp"><h3>Utilisation du formulaire</h3></span><br/>
+      <p> Le formulaire ci-dessous doit être signé par le nouvel employé lors de la réception du matériel de la part du service informatique. </p>
+      <br/>
+      <br/>
+      <br/>
+
+      <span className="champapp"><h3>Archivage</h3></span><br/>
+      <p> Le formulaire est archivé par le service informatique en deux versions :<br/>
+            - Une version numérique sur le serveur de stockage.<br/>
+            - Une version papier archivée dans un dossier
+      </p>
+      <br/>
+      <br/>
+      <br/>
+      <br/>              
+      <br/>        
+      <br/>        
+      <br/>        
+      <br/>        
+      <br/>        
+      <br/>        
+      <br/>        
+
+      <span className="champapp"><h5>Service Informatique</h5></span><br/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       
+       {/* <table>
+      <thead> 
+        <tr>        
+        <th>  Materiel  </th>
+        <th>  Type  </th>
+        <th>  Numero de serie  </th>
+        <th>  Remarques  </th>
+        <th>  MP </th>
+        </tr>
+    
+      </thead>
+      <tbody>
+        
+      </tbody>
+      </table> */}
+       </div>        
      </div>
     )
   }
 
 
 
+
+ 
+  
 export default AttributionImp;
