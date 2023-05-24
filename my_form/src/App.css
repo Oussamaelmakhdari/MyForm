@@ -487,12 +487,14 @@ form * {
 
 
 .titleImp {
-  display: flex;
+  /* display: flex;
+  */
   justify-content: center;
-  align-items: flex-end;
-  min-height: 300vh;
+ /* align-items: flex-end;
+  min-height: 300vh;*/
   position: absolute;
-  bottom: 0;
+  /* bottom: 0;  */
+  padding-top: 89.5rem;
  
 }
 
@@ -500,15 +502,12 @@ form * {
   position: absolute;
   bottom: 0;
 } */
-.under-title{
-  padding-top: 0rem;
+/* .under-title{
   display: flex;
   justify-content: center;
   align-items: flex-end;
   min-height: 100vh;
-  bottom: 0;
-   
-}
+} */
 
 
 

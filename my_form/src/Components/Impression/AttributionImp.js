@@ -40,19 +40,30 @@ function AttributionImp() {
   return (
     <div className="">
       <div>
+
+
       <div className="containerAtt">
           <img src={img} alt="My Image" className="top-left-image" style={{ width: '300px', height: 'auto' }} />
        </div>  
        <div className="container-emp">
           Employer ID : {stateCust.id}
        </div>  
-       <div className="titleImp"><h1 className="phrase" style={{ color:'darkgreen'}}>Formulaire d'attribution du matériel (v 1.0)</h1><br/>
-       <h6 className="under-title">Quality Bean Morocco</h6>
+       <div className="titleImp"><h1 className="phrase" style={{ color:'darkgreen'}}>Formulaire d'attribution du matériel (v 1.0)</h1><h6 className="under-title">Quality Bean Morocco</h6><br/><br/>
+
        </div>  
 
-                  
+      </div><br/>
 
-        <AttribForm/> </div>
+      <div>
+        
+        
+        
+        
+        
+      </div>
+
+
+      
      </div>
     )
   }
