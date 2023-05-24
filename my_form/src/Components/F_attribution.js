@@ -28,12 +28,14 @@ function F_attribution() {
          material:d.material,
          type:d.type,
          nserie:d.nserie,
-         remarque:d.remarque
+         remarque:d.remarque,
+         departement:d.departement,
+         date: new Date(d.date).toDateString(),
        };
       }));
     }).catch(err=>alert(err));
   }
-
+  
   // if(goToattribu){
   //   return <Navigate to="/AttributionImp"/>
   // }
@@ -60,7 +62,7 @@ function F_attribution() {
     //   position: toast.POSITION.TOP_CENTER
    
   }
-  
+
   return (
   <div className="F_attribution">
     <header className="F_attribution">
@@ -126,6 +128,8 @@ function F_attribution() {
       <th scope="col">Type</th>
       <th scope="col">Numero de serie</th>
       <th scope="col">Remarques</th>
+      <th scope="col">Departement</th>
+      <th scope="col">Date</th>
       <th scope="col">Editer</th>
       <th scope="col">Imprimer</th>
     </tr>

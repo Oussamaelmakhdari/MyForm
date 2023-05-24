@@ -18,7 +18,7 @@ function App() {
           <Route path="/" element={<Home/>}/>
           <Route path="/F_attribution" element={<F_attribution/>}/>
           <Route path="/F_recuperation" element={<F_recuperation/>}/> 
-          <Route path="/AttributionImp" element={<AttributionImp/>}/> 
+          <Route path="/AttributionImp/:id" element={<AttributionImp/>}/> 
           <Route path="/addAtt" element={<AddAttribueur/>}/>
           <Route path="/editAtt/:id" element={<Editemployer/>}/>
         </Routes>

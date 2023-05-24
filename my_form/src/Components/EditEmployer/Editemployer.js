@@ -31,7 +31,9 @@ function Editemployer() {
                 material:employer.material,
                 type:employer.type,
                 nserie:employer.nserie,
-                remarque:employer.remarque
+                remarque:employer.remarque,
+                departement:employer.departement,
+                date:new Date(employer.date).toISOString().split("T")[0],
             });
         }).catch(err=>alert(err));
     }
@@ -76,6 +78,9 @@ function Editemployer() {
                         type:stateCust.type,
                         remarque:stateCust.remarque,
                         nserie:stateCust.nserie,
+                        departement:stateCust.departement,
+                        date:stateCust.date
+
                     });
                 }
                         
@@ -93,6 +98,9 @@ function Editemployer() {
                         type:stateCust.type,
                         nserie:stateCust.nserie,
                         remarque:stateCust.remarque,
+                        departement:stateCust.departement,
+                        date:stateCust.date
+
 
                     });
                 }
@@ -110,6 +118,9 @@ function Editemployer() {
                         material:stateCust.material,
                         nserie:stateCust.nserie,
                         remarque:stateCust.remarque,
+                        departement:stateCust.departement,
+                        date:stateCust.date
+
                     });
                 }
                         
@@ -124,12 +135,18 @@ function Editemployer() {
                         name:stateCust.name,
                         material:stateCust.material,
                         type:stateCust.type,
-                        remarque:stateCust.remarque});
+                        remarque:stateCust.remarque,
+                        departement:stateCust.departement,
+                        date:stateCust.date
+                    
+                    });
+                        
                 }
                         
             } className="form-control form-control-sm"/>
-        </div><div className="form-group">
-            <label >Reamrques </label>
+        </div>
+        <div className="form-group">
+            <label >Remarques </label>
             <input type="text" value={stateCust.remarque} onChange={ e=>{
                     let value = e.target.value;
                     setstateCust({remarque:value,
@@ -137,7 +154,44 @@ function Editemployer() {
                         name:stateCust.name,
                         type:stateCust.type,
                         material:stateCust.material,
-                        nserie:stateCust.nserie
+                        nserie:stateCust.nserie,
+                        departement:stateCust.departement,
+                        date:stateCust.date
+
+                    });
+                }
+                        
+            } className="form-control form-control-sm"/>
+        </div>
+        <div className="form-group">
+            <label >Departement </label>
+            <input type="text" value={stateCust.departement} onChange={ e=>{
+                    let value = e.target.value;
+                    setstateCust({departement:value,
+                        id:stateCust.id,
+                        name:stateCust.name,
+                        type:stateCust.type,
+                        material:stateCust.material,
+                        remarque:stateCust.remarque,
+                        nserie:stateCust.nserie,
+                        date:stateCust.date
+                    });
+                }
+                        
+            } className="form-control form-control-sm"/>
+        </div>
+        <div className="form-group">
+            <label >Date </label>
+            <input type="text" value={stateCust.date} onChange={ e=>{
+                    let value = e.target.value;
+                    setstateCust({date:value,
+                        id:stateCust.id,
+                        name:stateCust.name,
+                        type:stateCust.type,
+                        material:stateCust.material,
+                        remarque:stateCust.remarque,
+                        nserie:stateCust.nserie,
+                        departement:stateCust.departement
                     });
                 }
                         

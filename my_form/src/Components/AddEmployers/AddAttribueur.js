@@ -9,13 +9,17 @@ function AddAttribueur() {
         let type=e.target[2].value;
         let nserie=e.target[3].value;
         let remarque=e.target[4].value;
+        let departement = e.target[5].value;
+        let date = e.target[6].value;
 
         let data = {
             name,
             material,
             type,
             nserie,
-            remarque
+            remarque,
+            departement,
+            date
         };
         console.log(data);
         postemployer(data)
@@ -43,6 +47,8 @@ function AddAttribueur() {
         e.target[2].value = "";
         e.target[3].value = "";
         e.target[4].value = "";
+        e.target[5].value = "";
+        e.target[6].value = "";
       }
 
 
@@ -78,6 +84,21 @@ function AddAttribueur() {
         </div>
         <div className="form-group">
             <label >Reamrques </label>
+            <input type="text" className="form-control form-control-sm" placeholder="Enter "/>
+        </div>
+        <div className="form-group">
+            <label for="exampleFormControlSelect2">Departement</label>
+            <select multiple class="form-control" id="exampleFormControlSelect2">
+            <option>DRH</option>
+            <option>Finance</option>
+            <option>Logistic </option>
+            <option>Qualiter </option>
+            <option>Production </option>
+            <option>Maintenance </option>
+            </select>
+        </div>
+        <div className="form-group">
+            <label >Date </label>
             <input type="text" className="form-control form-control-sm" placeholder="Enter "/>
         </div>
         <button type="submit" value='submit' className="btn btn-primary btn-sm">Ajouter</button>

@@ -459,3 +459,30 @@ form * {
 .sup:not(:disabled):active {
   transform: translateY(.125rem);
 }
+
+/* Attribution form impression */
+.containerAtt {
+  /* position: relative; */
+  /* width: 10%;
+  height: 10%; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-bottom: 100rem;
+  /* width: 1rem;
+  height: 1rem; /* Adjust the width according to your needs */
+  /* height: auto; */
+}
+
+
+.container-emp {
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-decoration: dashed;
+  color: #ffffff;
+  background-color: darkgreen;
+}
+
+
+
