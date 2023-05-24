@@ -2,9 +2,24 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 function AttribRow(props) {
   return props.employer.map(d=>(
-    <tr>
-    {/* <td><input type="checkbox" aria-label="Checkbox for following text input"/></td> */}
+    <tr key={d.id}>
     {/* <th scope='row'>{d.id}</th> */}
+    <td>
+      <input type="checkbox" 
+        checked={d.select}
+        onChange={e => {
+        let value = e.target.checked;
+        props.setemployer(
+        props.employer.map(sd => {
+        if (sd.id === d.id) {
+        sd.select = value;
+        }
+        return sd;
+        })
+      );
+        }}
+          />
+           </td>
     <td>{d.name}</td>
     <td>{d.material}</td>
     <td>{d.type}</td>

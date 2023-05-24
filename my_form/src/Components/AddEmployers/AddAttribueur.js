@@ -37,7 +37,13 @@ function AddAttribueur() {
           position: toast.POSITION.TOP_CENTER
         });
       }
-
+      const vider = (e) =>{
+        e.target[0].value = "";
+        e.target[1].value = "";
+        e.target[2].value = "";
+        e.target[3].value = "";
+        e.target[4].value = "";
+      }
 
 
     
@@ -47,6 +53,7 @@ function AddAttribueur() {
         e.preventDefault();
         submit(e);
         handleSubmit(e);
+        vider(e);
     }}>
         <div className="form-group">
             <label >Nom Complet </label>

@@ -4,20 +4,23 @@ import '../App.css';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import AttribRow from './layout/AttribRow';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function F_attribution() {
 
   // const [goToattribu, setgoToattribu]=useState(false);
   const [employer, setemployer]=useState([]);  
 
-  useEffect(()=>{
+  useEffect(()=>{  
     getemployer();
   },[]);  
 
   const getemployer=()=>{
     axios.get("http://localhost:8080/employers").then(data=>{
       let emp = data.data;
-      setemployer(emp.map(d=>{
+      setemployer(
+       emp.map(d=>{
        return {
          select:false,
          id:d.id,
@@ -26,7 +29,7 @@ function F_attribution() {
          type:d.type,
          nserie:d.nserie,
          remarque:d.remarque
-       }
+       };
       }));
     }).catch(err=>alert(err));
   }
@@ -34,14 +37,45 @@ function F_attribution() {
   // if(goToattribu){
   //   return <Navigate to="/AttributionImp"/>
   // }
+  const deleteEmployerByIds=() => {
+    let arraysids = [];
+    employer.forEach(d => {
+      if(d.select){
+        arraysids.push(d.id);
+      }
+    });
+    axios.delete(`http://localhost:8080/employers/${arraysids}`).then(data => {
+      console.log(data);
+      getemployer();
+    }).catch(err => alert(err));
+  };
+  const handleSubmit = () => {
+    // event.preventDefault();
+    
+    // Submit logic here
+    
+    toast.success('Demandeur supprimer avec succes');
+
+    // toast.success('Employer supprimer avec succes', {
+    //   position: toast.POSITION.TOP_CENTER
+   
+  }
 
   return (
   <div className="F_attribution">
     <header className="F_attribution">
     </header>
     <Link to='/addAtt'><button className="recub">Ajouter Demandeur</button></Link>
+    <button className="sup"
+    type="submit" value='submit'
+    onClick={() => {
+      deleteEmployerByIds();
+      handleSubmit()
+    }}>
+    Supprimer Demandeur</button>
+    
 
-      {/* <div>
+      {/* <div> 
       <h4> Ordinateur :</h4>  <br/>
       <input type='checkbox' value='op'/> Ordinateur Portable 
       <input type='checkbox' value='tab'/>Tablette <br/>
@@ -75,7 +109,18 @@ function F_attribution() {
 
 <table className="table">
   <thead>
-    <tr>
+    <tr><th>
+      <input
+      type="checkbox"
+      onChange={e => {
+      let value = e.target.checked;
+      setemployer(
+      employer.map(d => {
+      d.select = value;
+      return d;
+      })
+    );
+      }}/> </th>
       <th scope="col">Nom et Prenom</th>
       <th scope="col">Materiel	</th>
       <th scope="col">Type</th>
@@ -90,10 +135,13 @@ function F_attribution() {
     setemployer={setemployer}
     />
   </tbody>
-   </table>
-    </div>
+  </table>
+  <ToastContainer />
+  </div>
   );
 }
+
+
 
 
 
