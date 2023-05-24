@@ -9,7 +9,7 @@ import { useLocation } from 'react-router-dom';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import img from "../../images/qbm.png";
-
+import AttribForm from "../layout/AttribForm";
 
 function AttributionImp() {
   const {id} = useParams();
@@ -39,12 +39,20 @@ function AttributionImp() {
   }
   return (
     <div className="">
+      <div>
       <div className="containerAtt">
           <img src={img} alt="My Image" className="top-left-image" style={{ width: '300px', height: 'auto' }} />
        </div>  
        <div className="container-emp">
           Employer ID : {stateCust.id}
-       </div>   
+       </div>  
+       <div className="titleImp"><h1 className="phrase" style={{ color:'darkgreen'}}>Formulaire d'attribution du matériel (v 1.0)</h1><br/>
+       <h6 className="under-title">Quality Bean Morocco</h6>
+       </div>  
+
+                  
+
+        <AttribForm/> </div>
      </div>
     )
   }

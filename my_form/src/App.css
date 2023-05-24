@@ -486,3 +486,29 @@ form * {
 
 
 
+.titleImp {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  min-height: 300vh;
+  position: absolute;
+  bottom: 0;
+ 
+}
+
+/* .phrase {
+  position: absolute;
+  bottom: 0;
+} */
+.under-title{
+  padding-top: 0rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  min-height: 100vh;
+  bottom: 0;
+   
+}
+
+
+
