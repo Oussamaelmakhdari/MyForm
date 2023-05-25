@@ -56,7 +56,7 @@ function F_attribution() {
     
     // Submit logic here
     
-    toast.success('Demandeur supprimer avec succes');
+    toast.success('Bénéficiaire supprimer avec succes');
 
     // toast.success('Employer supprimer avec succes', {
     //   position: toast.POSITION.TOP_CENTER
@@ -67,16 +67,16 @@ function F_attribution() {
   <div className="F_attribution">
     <header className="F_attribution">
     </header>
-    <Link to='/addAtt'><button className="recub">Ajouter Demandeur</button></Link>
+    <Link to='/addAtt'><button className="recub">Ajouter Bénéficiaire </button></Link>
     <button className="sup"
     type="submit" value='submit'
     onClick={() => {
       deleteEmployerByIds();
       handleSubmit()
     }}>
-    Supprimer Demandeur</button>
+    Supprimer Bénéficiaire </button>
     
-
+    
       {/* <div> 
       <h4> Ordinateur :</h4>  <br/>
       <input type='checkbox' value='op'/> Ordinateur Portable 

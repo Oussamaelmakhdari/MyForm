@@ -538,3 +538,22 @@ form * {
   background-color: rgb(220, 210, 210);
 }
 
+.info{
+
+}
+.cdp{
+
+}
+.paragc{
+  display: flex;
+  gap: 500px;
+}
+
+.parg{
+  margin: 0;
+  padding-left: 5rem;
+}
+.divgen{
+  padding-left: 1rem;
+  padding-right: 1rem;
+}

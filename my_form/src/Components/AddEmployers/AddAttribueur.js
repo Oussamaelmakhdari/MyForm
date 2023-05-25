@@ -37,7 +37,7 @@ function AddAttribueur() {
         // Submit logic here
         
         // Show notification after successful submission
-        toast.success('Employer Ajouter avec succes', {
+        toast.success('Bénéficiaire  Ajouter avec succes', {
           position: toast.POSITION.TOP_CENTER
         });
       }
@@ -89,12 +89,16 @@ function AddAttribueur() {
         <div className="form-group">
             <label for="exampleFormControlSelect2">Departement</label>
             <select multiple class="form-control" id="exampleFormControlSelect2">
-            <option>DRH</option>
+            <option>Service d’achat et approvisionnements</option>
             <option>Finance</option>
             <option>Logistic </option>
-            <option>Qualiter </option>
-            <option>Production </option>
+            <option>Service de qualité </option>
+            <option>Production et Conditionnement </option>
             <option>Maintenance </option>
+            <option>Service de l’IT </option>
+            <option>Service De comptabilité </option>
+            <option>Service de Contrôle de Gestion </option>
+            <option>DRH </option>
             </select>
         </div>
         <div className="form-group">
