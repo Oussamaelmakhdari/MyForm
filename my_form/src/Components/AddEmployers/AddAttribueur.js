@@ -28,18 +28,28 @@ function AddAttribueur() {
     const postemployer=(data)=>{
         axios.post("http://localhost:8080/employer", data).then((d)=>{
         console.log(d);
-        }).catch(err=>alert(err)); 
+        }).catch(err=>alert("S'il vous Plait remplir tout les champs !!")); 
     }
 
     const handleSubmit = (event) => {
         event.preventDefault();
         
         // Submit logic here
-        
+        if ( (event.target[0].value !== "" )||
+        (event.target[1].value !== "" ) ||
+        (event.target[2].value !== "" ) ||
+        (event.target[3].value !== "" ) ||
+        (event.target[4].value !== "" ) ||
+        (event.target[5].value !== "" ) ||
+        (event.target[5].value !== "" )
+        ) {
+            toast.success('Bénéficiaire  Ajouter avec succes', {
+            position: toast.POSITION.TOP_CENTER
+          });
+        }
+
         // Show notification after successful submission
-        toast.success('Bénéficiaire  Ajouter avec succes', {
-          position: toast.POSITION.TOP_CENTER
-        });
+        
       }
       const vider = (e) =>{
         e.target[0].value = "";

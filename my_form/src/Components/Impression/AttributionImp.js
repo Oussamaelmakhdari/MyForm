@@ -44,7 +44,7 @@ function AttributionImp() {
   }
   const handleprint = useReactToPrint({
     content : () => componentRef.current,
-    documentTitle:"Formulaire d'attribution",
+    documentTitle:"Formulaire d'attribution du materiels",
     // onAfterPrint: () => alert('Impression avec succes')
   });
 
@@ -149,7 +149,7 @@ function AttributionImp() {
       <br/>
       <br/>
       <br/>
-      
+
       <span className="champapp"><h5> Hardware </h5></span><br/>
       <table className="tabform">
       <thead>
@@ -168,7 +168,7 @@ function AttributionImp() {
             <td className="tdf"> {stateCust.type}</td>
             <td className="tdf"> {stateCust.nserie}</td>
             <td className="tdf"> {stateCust.remarque}</td>
-
+          
           </tr>          
       </tbody>
     </table>

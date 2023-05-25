@@ -1,18 +1,18 @@
 import '../App.css';
-import { Navigate } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import React from 'react';
 
 function Home() {
     const [goToattribu, setgoToattribu]=React.useState(false);   
     const [goTorecup, setgoTorecup]=React.useState(false);
 
-     if(goTorecup){
-      return <Navigate to="/F_recuperation"/>
-    }
+    //  if(goTorecup){
+    //   return <Navigate to="/F_recuperation"/>
+    // }
     
-    if(goToattribu){
-        return <Navigate to="/F_attribution"/>
-    }
+    // if(goToattribu){
+    //     return <Navigate to="/F_attribution"/>
+    // }
     
     return (
     <div className="Home">
@@ -24,7 +24,7 @@ function Home() {
     </header>
       <div>
         <Navigate to="/"/>
-      <button className="button" onClick={()=>{setgoToattribu(true)}}>Formulaire d'attribution du matériel</button>     <button className="button" onClick={()=>{setgoTorecup(true)}}>Formulaire de récupération du matériel</button>
+      <Link to="/F_Attribution"><button className="button" >Formulaire d'attribution du matériel</button> </Link>   <Link to="/F_recuperation"> <button className="button">Formulaire de récupération du matériel</button></Link>
       </div>
       <div className="Footer"></div>
     </div>

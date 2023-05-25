@@ -49,15 +49,16 @@ function F_attribution() {
     axios.delete(`http://localhost:8080/employers/${arraysids}`).then(data => {
       console.log(data);
       getemployer();
-    }).catch(err => alert(err));
+    }).catch(() => alert("Veuiller Selectioner un Bénéficiaire"));
   };
   const handleSubmit = () => {
     // event.preventDefault();
-    
+    employer.forEach(d => {
+      if(d.select){
+        toast.success('Bénéficiaire supprimer avec succes');
+      }})
     // Submit logic here
     
-    toast.success('Bénéficiaire supprimer avec succes');
-
     // toast.success('Employer supprimer avec succes', {
     //   position: toast.POSITION.TOP_CENTER
    
@@ -76,7 +77,7 @@ function F_attribution() {
     }}>
     Supprimer Bénéficiaire </button>
     
-    
+
       {/* <div> 
       <h4> Ordinateur :</h4>  <br/>
       <input type='checkbox' value='op'/> Ordinateur Portable 
