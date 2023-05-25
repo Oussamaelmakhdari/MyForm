@@ -123,7 +123,7 @@ function AttributionImp() {
             - Une version numérique sur le serveur de stockage.<br/>
             - Une version papier archivée dans un dossier
       </p>
-      
+
       <br/>
       <br/>
       <br/>
@@ -149,7 +149,7 @@ function AttributionImp() {
       <br/>
       <br/>
       <br/>
-
+      
       <span className="champapp"><h5> Hardware </h5></span><br/>
       <table className="tabform">
       <thead>
@@ -181,26 +181,29 @@ function AttributionImp() {
       
       <span className="champapp"><h5>Déclaration de consentement</h5></span><br/>
       <p>Je m’engage à mettre à la disposition de l’entreprise <strong>Quality Bean Morroco</strong> le matériel cité en haut, au cas où je quitterai l’entreprise dans une période inférieure à deux ans.
-Dans le cas le téléphone sera endommagé ou perdu, quel que soit les conditions, l’entreprise ne procédera à aucun changement dans une période inférieure à deux ans.
+       Dans le cas le téléphone sera endommagé ou perdu, quel que soit les conditions, l’entreprise ne procédera à aucun changement dans une période inférieure à deux ans.
       </p><br/>
       <p className="info"> <strong> Nom Complet : {stateCust.name} </strong><br/>
+ 
       <strong> Departement   : {stateCust.departement} </strong><br/>
       <strong> date   : {stateCust.date} </strong><br/>
-      <strong> Signature   :</strong>..................................
+      <strong> Signature   : </strong>..................................
       </p>
       <br/>
       <br/>
       <br/>
       <p className="paragc"><p className="parg"><strong>Responsable Département</strong></p>       <p className="parg"><strong>Bénéficiaire </strong></p>
       </p>
-       </div> 
-       
-       
+      </div> 
      </div>
-     <button variant='success' className="recub" onClick={handleprint}> Imprimer</button> 
+     <button variant='success' className="recub" onClick={handleprint}> Imprimer </button> 
      </>
     )
   }
+
+
+
+
 
 
 

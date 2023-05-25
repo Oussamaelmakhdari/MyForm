@@ -51,13 +51,10 @@ function Editemployer() {
         // Submit logic here
         
         // Show notification after successful submission
-        toast.success('Employer edite avec succes', {
+        toast.success('Bénéficiaire edite avec succes', {
           position: toast.POSITION.TOP_CENTER
         });
       }
-
-
-
 
     return (
     <div className='container my-3'>
@@ -68,7 +65,7 @@ function Editemployer() {
         }
         }>
         <div className="form-group">
-            <label >Employer ID : {stateCust.id}</label>
+            <label> Nom Complet : </label>
             <input type="text" onChange={ (e)=>{
                         let value = e.target.value;
                         setstateCust({
@@ -164,7 +161,7 @@ function Editemployer() {
             } className="form-control form-control-sm"/>
         </div>
         <div className="form-group">
-            <label >Departement </label>
+            <label> Departement </label>
             <input type="text" value={stateCust.departement} onChange={ e=>{
                     let value = e.target.value;
                     setstateCust({departement:value,

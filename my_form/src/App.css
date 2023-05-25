@@ -186,6 +186,8 @@
 
 .F_attribution{
   text-align: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 .F_attribution-header{
   text-align: center;

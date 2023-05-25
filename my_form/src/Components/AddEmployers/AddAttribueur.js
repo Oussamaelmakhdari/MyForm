@@ -83,7 +83,7 @@ function AddAttribueur() {
             <input type="text" className="form-control form-control-sm" placeholder="Enter "/>
         </div>
         <div className="form-group">
-            <label >Reamrques </label>
+            <label >Remarques </label>
             <input type="text" className="form-control form-control-sm" placeholder="Enter "/>
         </div>
         <div className="form-group">
