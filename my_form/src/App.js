@@ -25,13 +25,14 @@ function App() {
           <Route path="/AttributionImp/:id" element={<AttributionImp/>}/> 
           <Route path="/RecuImp/:id" element={<RecuImp/>}/> 
 
-          <Route path="/addAtt" element={<AddAttribueur/>}/>
+          <Route path="/F_attribution/addAtt" element={<AddAttribueur/>}/>
           <Route path="/addrecup" element={<AddRecupereur/>}/>
           <Route path="/editAtt/:id" element={<Editemployer/>}/>
           <Route path="/editrecup/:id" element={<EditRecupereur/>}/>
         </Routes>
       </Router>       
     </div>
+    
   );
 }
 

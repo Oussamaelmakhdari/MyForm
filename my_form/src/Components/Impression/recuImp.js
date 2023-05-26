@@ -118,6 +118,8 @@ function RecuImp() {
       <br/>
       <br/>
       <br/>
+      <br/>
+
 
       <span className="champapp"><h3>Archivage</h3></span><br/>
       <p> Le formulaire est archivé par le service informatique en deux versions :<br/>
@@ -141,7 +143,6 @@ function RecuImp() {
       <br/>        
       <br/>  
       <br/>
-      <br/>      
     
 
       <span className="champapp"><h5>Departement IT</h5></span><br/>
@@ -187,7 +188,7 @@ function RecuImp() {
       <p className="info"> <strong> Nom Complet : {stateCust.name} </strong><br/>
  
       <strong> Departement   : {stateCust.departement} </strong><br/>
-      <strong> date   : {stateCust.date} </strong><br/>
+      <strong> Date   : {stateCust.date} </strong><br/>
       <strong> Signature DRH  : </strong>..................................
       </p>
       <br/>
@@ -197,12 +198,15 @@ function RecuImp() {
       <br/>
       <br/>
       <strong> Signature Employé   : </strong>..................................
-{/* 
+      {/* 
       <p className="paragc"><p className="parg"><strong>Responsable Département</strong></p>       <p className="parg"><strong>Bénéficiaire </strong></p>
-      </p> */}
+      </p> 
+      */}
+
       </div> 
      </div>
-     <button variant='success' className="recub" onClick={handleprint}> Imprimer </button> 
+     {/* <button variant='success' className="recub" onClick={handleprint}> Imprimer </button>  */}
+     <button variant='success' class="print-button" onClick={handleprint}><span class="print-icon"></span></button>
      </>
   )
 }

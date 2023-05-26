@@ -68,7 +68,7 @@ function F_attribution() {
   <div className="F_attribution">
     <header className="F_attribution">
     </header>
-    <Link to='/addAtt'><button className="recub">Ajouter Bénéficiaire </button></Link>
+    <Link to='/F_attribution/addAtt'><button className="recub">Ajouter Bénéficiaire </button></Link>
     <button className="sup"
     type="submit" value='submit'
     onClick={() => {

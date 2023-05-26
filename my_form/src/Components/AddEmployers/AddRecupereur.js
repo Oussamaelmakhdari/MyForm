@@ -34,18 +34,29 @@ function AddRecupereur() {
 const postemployer=(data)=>{
     axios.post("http://localhost:8080/recupemp", data).then((d)=>{
     console.log(d);
-    }).catch(err=>alert(err)); 
+    }).catch(err=>alert("S'il vous Plait remplir tout les champs !!")); 
 }
 
 const handleSubmit = (event) => {
     event.preventDefault();
+    if ( (event.target[0].value !== "" )||
+    (event.target[1].value !== "" ) ||
+    (event.target[2].value !== "" ) ||
+    (event.target[3].value !== "" ) ||
+    (event.target[4].value !== "" ) ||
+    (event.target[5].value !== "" ) ||
+    (event.target[5].value !== "" )
+    ) {
+        toast.success('Recuperation Ajouter avec succes', {
+            position: toast.POSITION.TOP_CENTER
+          });
+    }
+
     
     // Submit logic here
     
     // Show notification after successful submission
-    toast.success('recuperation Ajouter avec succes', {
-      position: toast.POSITION.TOP_CENTER
-    });
+    
   }
   const vider = (e) =>{
     e.target[0].value = "";
@@ -56,7 +67,6 @@ const handleSubmit = (event) => {
     e.target[5].value = "";
     e.target[6].value = "";
     e.target[7].value = "";
-
   }
 
 
@@ -70,11 +80,11 @@ const handleSubmit = (event) => {
         vider(e);
     }}>
         <div className="form-group">
-            <label >Nom Complet </label>
-            <input type="text" className="form-control form-control-sm" placeholder="Enter"/>
+            <label ><strong>Nom Complet</strong> </label>
+            <input type="text" className="form-control form-control-sm" placeholder="Entrer"/>
         </div>
         <div className="form-group">
-            <label for="exampleFormControlSelect2">Materiel</label>
+            <label for="exampleFormControlSelect2"><strong>Materiel</strong></label>
             <select multiple class="form-control" id="exampleFormControlSelect2">
             <option>Ordinateur</option>
             <option>Téléphone</option>
@@ -83,19 +93,19 @@ const handleSubmit = (event) => {
             </select>
         </div>
         <div className="form-group">
-            <label >Type</label>
-            <input type="text" className="form-control form-control-sm" placeholder="Enter "/>
+            <label ><strong>Type</strong></label>
+            <input type="text" className="form-control form-control-sm" placeholder="Entrer "/>
         </div>
         <div className="form-group">
-            <label >Numero de serie</label>
-            <input type="text" className="form-control form-control-sm" placeholder="Enter "/>
+            <label ><strong>Numero de serie</strong></label>
+            <input type="text" className="form-control form-control-sm" placeholder="Entrer "/>
         </div>
         <div className="form-group">
-            <label >Remarques </label>
-            <input type="text" className="form-control form-control-sm" placeholder="Enter "/>
+            <label> <strong>Remarques</strong> </label>
+            <input type="text" className="form-control form-control-sm" placeholder="Entrer "/>
         </div>
         <div className="form-group">
-            <label for="exampleFormControlSelect2">Departement</label>
+            <label for="exampleFormControlSelect2"><strong>Departement</strong></label>
             <select multiple class="form-control" id="exampleFormControlSelect2">
             <option>Service d’achat et approvisionnements</option>
             <option>Finance</option>
@@ -110,12 +120,12 @@ const handleSubmit = (event) => {
             </select>
         </div>
         <div className="form-group">
-            <label >Date </label>
-            <input type="text" className="form-control form-control-sm" placeholder="Enter "/>
+            <label > <strong>Date</strong></label>
+            <input type="text" className="form-control form-control-sm" placeholder="aaaa-mm-jj"/>
         </div>
         <div className="form-group">
-            <label >Mot de Passe </label>
-            <input type="text" className="form-control form-control-sm" placeholder="Enter "/>
+            <label ><strong>Mot de Passe </strong></label>
+            <input type="text" className="form-control form-control-sm" placeholder="Entrer "/>
         </div>
         <button type="submit" value='submit' className="btn btn-primary btn-sm">Ajouter</button>
       </form>

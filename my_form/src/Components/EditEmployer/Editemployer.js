@@ -51,7 +51,7 @@ function Editemployer() {
         // Submit logic here
         
         // Show notification after successful submission
-        toast.success('Bénéficiaire edite avec succes', {
+        toast.success('Bénéficiaire Edité avec succées', {
           position: toast.POSITION.TOP_CENTER
         });
       }
@@ -65,7 +65,7 @@ function Editemployer() {
         }
         }>
         <div className="form-group">
-            <label> Nom Complet : </label>
+            <label>  <strong>Nom Complet </strong> </label>
             <input type="text" onChange={ (e)=>{
                         let value = e.target.value;
                         setstateCust({
@@ -85,7 +85,7 @@ function Editemployer() {
         </div>
         <div className="form-group">
 
-            <label >Material</label>
+            <label >  <strong>Materiel </strong></label>
             <input type="text" value={stateCust.material} onChange={ e=>{
                     let value = e.target.value;
                     setstateCust({
@@ -105,7 +105,7 @@ function Editemployer() {
             } className="form-control form-control-sm"/>
         </div>
         <div className="form-group">
-            <label >Type </label>
+            <label >  <strong>Type </strong></label>
             <input type="text" value={stateCust.type} onChange={ e=>{
                     let value = e.target.value;
                     setstateCust({
@@ -123,7 +123,7 @@ function Editemployer() {
                         
             } className="form-control form-c ontrol-sm"/>
         </div><div className="form-group">
-            <label >Numero de serie </label>
+            <label >  <strong>Numero de serie </strong></label>
             <input type="text" value={stateCust.nserie} onChange={ e=>{
                     let value = e.target.value;
                     setstateCust({
@@ -143,7 +143,7 @@ function Editemployer() {
             } className="form-control form-control-sm"/>
         </div>
         <div className="form-group">
-            <label >Remarques </label>
+            <label >  <strong>Remarques </strong></label>
             <input type="text" value={stateCust.remarque} onChange={ e=>{
                     let value = e.target.value;
                     setstateCust({remarque:value,
@@ -161,7 +161,7 @@ function Editemployer() {
             } className="form-control form-control-sm"/>
         </div>
         <div className="form-group">
-            <label> Departement </label>
+            <label>   <strong>Departement </strong></label>
             <input type="text" value={stateCust.departement} onChange={ e=>{
                     let value = e.target.value;
                     setstateCust({departement:value,
@@ -178,7 +178,7 @@ function Editemployer() {
             } className="form-control form-control-sm"/>
         </div>
         <div className="form-group">
-            <label >Date </label>
+            <label >  <strong>Date</strong></label>
             <input type="text" value={stateCust.date} onChange={ e=>{
                     let value = e.target.value;
                     setstateCust({date:value,

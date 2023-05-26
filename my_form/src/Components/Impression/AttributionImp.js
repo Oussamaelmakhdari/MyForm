@@ -60,7 +60,7 @@ function AttributionImp() {
        <br/>
       <br/>
        <div className="titleImp"><h1 className="phrase" style={{ color:'darkgreen'}}>Formulaire d'attribution du matériel (v 1.0)</h1>
-       <h6 className="under-title"> Quality Bean Morocco </h6><br/><br/>
+       <h6 className="under-title"> Quality Bean Morocco </h6><br/>
        <span className="champapp"><h5>Service Informatique</h5></span><br/>
         <h1 className="scndp" style={{ color:'darkgreen',
       }}>Formulaire d'attribution du matériel (v 1.0)</h1>
@@ -117,6 +117,8 @@ function AttributionImp() {
       <br/>
       <br/>
       <br/>
+      <br/>
+
 
       <span className="champapp"><h3>Archivage</h3></span><br/>
       <p> Le formulaire est archivé par le service informatique en deux versions :<br/>
@@ -135,10 +137,10 @@ function AttributionImp() {
       <br/>        
       <br/>        
       <br/>    
+      <br/> 
       <br/>        
-      <br/>  
-      <br/>        
-      <br/>      
+       
+        
 
       <span className="champapp"><h5>Service Informatique</h5></span><br/>
       <br/>
@@ -186,8 +188,8 @@ function AttributionImp() {
       <p className="info"> <strong> Nom Complet : {stateCust.name} </strong><br/>
  
       <strong> Departement   : {stateCust.departement} </strong><br/>
-      <strong> date   : {stateCust.date} </strong><br/>
-      <strong> Signature   : </strong>..................................
+      <strong> Date          : {stateCust.date} </strong><br/>
+      <strong> Signature     : </strong>..................................
       </p>
       <br/>
       <br/>
@@ -196,7 +198,8 @@ function AttributionImp() {
       </p>
       </div> 
      </div>
-     <button variant='success' className="recub" onClick={handleprint}> Imprimer </button> 
+     {/* <button  className="recub" > Imprimer </button>  */}
+     <button variant='success' class="print-button" onClick={handleprint}><span class="print-icon"></span></button>
      </>
     )
   }

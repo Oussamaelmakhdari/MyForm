@@ -24,7 +24,7 @@ function Home() {
     </header>
       <div>
         <Navigate to="/"/>
-      <Link to="/F_Attribution"><button className="button" >Formulaire d'attribution du matériel</button> </Link>   <Link to="/F_recuperation"> <button className="button">Formulaire de récupération du matériel</button></Link>
+      <Link to="/F_attribution"><button className="button" >Formulaire d'attribution du matériel</button> </Link>   <Link to="/F_recuperation"> <button className="button">Formulaire de récupération du matériel</button></Link>
       </div>
       <div className="Footer"></div>
     </div>

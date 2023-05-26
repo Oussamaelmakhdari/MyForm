@@ -69,7 +69,7 @@ function EditRecupereur() {
         }
         }>
         <div className="form-group">
-            <label> Nom Complet : </label>
+            <label> <strong>Nom Complet </strong> </label>
             <input type="text" onChange={ (e)=>{
                         let value = e.target.value;
                         setstateCust({
@@ -90,7 +90,7 @@ function EditRecupereur() {
         </div>
         <div className="form-group">
 
-            <label >Material</label>
+            <label ><strong>Material</strong></label>
             <input type="text" value={stateCust.material} onChange={ e=>{
                     let value = e.target.value;
                     setstateCust({
@@ -112,7 +112,7 @@ function EditRecupereur() {
             } className="form-control form-control-sm"/>
         </div>
         <div className="form-group">
-            <label >Type </label>
+            <label > <strong>Type</strong></label>
             <input type="text" value={stateCust.type} onChange={ e=>{
                     let value = e.target.value;
                     setstateCust({
@@ -132,7 +132,7 @@ function EditRecupereur() {
                         
             } className="form-control form-c ontrol-sm"/>
         </div><div className="form-group">
-            <label >Numero de serie </label>
+            <label > <strong>Numero de serie</strong></label>
             <input type="text" value={stateCust.nserie} onChange={ e=>{
                     let value = e.target.value;
                     setstateCust({
@@ -154,7 +154,7 @@ function EditRecupereur() {
             } className="form-control form-control-sm"/>
         </div>
         <div className="form-group">
-            <label >Remarques </label>
+            <label > <strong>Remarques</strong></label>
             <input type="text" value={stateCust.remarque} onChange={ e=>{
                     let value = e.target.value;
                     setstateCust({remarque:value,
@@ -174,7 +174,7 @@ function EditRecupereur() {
             } className="form-control form-control-sm"/>
         </div>
         <div className="form-group">
-            <label> Departement </label>
+            <label> <strong>Departement</strong> </label>
             <input type="text" value={stateCust.departement} onChange={ e=>{
                     let value = e.target.value;
                     setstateCust({departement:value,
@@ -193,7 +193,7 @@ function EditRecupereur() {
             } className="form-control form-control-sm"/>
         </div>
         <div className="form-group">
-            <label >Date </label>
+            <label > <strong>Date</strong></label>
             <input type="text" value={stateCust.date} onChange={ e=>{
                     let value = e.target.value;
                     setstateCust({date:value,
@@ -212,7 +212,7 @@ function EditRecupereur() {
             } className="form-control form-control-sm"/>
         </div>
         <div className="form-group">
-            <label >Mot de passe </label>
+            <label ><strong>Mot de passe </strong></label>
             <input type="text" value={stateCust.mp} onChange={ e=>{
                     let value = e.target.value;
                     setstateCust({mp:value,
