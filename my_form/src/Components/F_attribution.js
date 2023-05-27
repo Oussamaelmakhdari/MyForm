@@ -6,6 +6,8 @@ import { useState, useEffect } from 'react';
 import AttribRow from './layout/AttribRow';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import img from "../images/qbm.png";
+
 
 function F_attribution() {
 
@@ -48,8 +50,8 @@ function F_attribution() {
     });
     axios.delete(`http://localhost:8080/employers/${arraysids}`).then(data => {
       console.log(data);
-      getemployer();
-    }).catch(() => alert("Veuiller Selectioner un Bénéficiaire"));
+      getemployer()
+    }).catch(() => toast.warning('Veuiller Selectioner une Recuperation'));
   };
   const handleSubmit = () => {
     // event.preventDefault();
@@ -66,6 +68,45 @@ function F_attribution() {
 
   return (
   <div className="F_attribution">
+    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+    
+  {/* <a className="navbar-brand"><img src={img} alt="My Image" className="top-left-image" style={{ width: '100px', height: 'auto' }} href=""/></a> */}
+  <button 
+  className="navbar-toggler"
+  type="button" 
+  data-toggle="collapse" 
+  data-target="#navbarSupportedContent" 
+  aria-controls="navbarSupportedContent" 
+  aria-expanded="false" 
+  aria-label="Toggle navigation">
+  <span className="navbar-toggler-icon"> </span>
+  </button>
+
+  <div className="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul className="navbar-nav mr-auto">
+      <li className="nav-item active">
+        {/* <a className="nav-link" href="/">Home <span className="sr-only">(current)</span></a> */}
+        <a className="nav-link" href="/"><img src={img} alt="My Image" className="top-left-image" style={{ width: '100px', height: 'auto' }} /></a>
+
+      </li>
+      {/* <li className="nav-item">
+        <a className="nav-link" href="../../component/customer/Customerrow">Employer</a>
+      </li> */}
+  </ul>
+
+    {/* <form className="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form> */}
+  </div>
+  <div className="navbar-right">
+    <a href="#" className="navbar-link"><strong>Chercher</strong></a>
+  </div>
+  </nav>
+  {/* <div className=".container-sb" style={{padding:'1rem'}}>
+        <a className="nav-link" href="/">Chercher</a>
+
+  </div>  */}
     <header className="F_attribution">
     </header>
     <Link to='/F_attribution/addAtt'><button className="recub">Ajouter Bénéficiaire </button></Link>
@@ -75,7 +116,8 @@ function F_attribution() {
       deleteEmployerByIds();
       handleSubmit()
     }}>
-    Supprimer Bénéficiaire </button>
+    Supprimer Bénéficiaire 
+    </button>
     
 
       {/* <div> 
@@ -125,9 +167,9 @@ function F_attribution() {
     );
       }}/> </th>
       <th scope="col">Nom et Prenom</th>
-      <th scope="col">Materiel	</th>
+      <th scope="col">Matériel	</th>
       <th scope="col">Type</th>
-      <th scope="col">Numero de serie</th>
+      <th scope="col">Numéro de serie</th>
       <th scope="col">Remarques</th>
       <th scope="col">Departement</th>
       <th scope="col">Date</th>
@@ -145,6 +187,8 @@ function F_attribution() {
   </div>
   );
 }
+
+
 
 
 

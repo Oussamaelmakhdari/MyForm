@@ -28,8 +28,8 @@ function AttribRow(props) {
     <td>{d.departement}</td>
     <td>{d.date}</td>
 
-    <td><Link to={`/editAtt/${d.id}`}><button className="btn btn-primary btn-sm">Edit</button></Link></td>
-    <td><Link to={`/AttributionImp/${d.id}`}><button className="btn btn-primary btn-sm">Imprimer</button></Link></td>
+    <td><Link to={`/editAtt/${d.id}`}><button className="btn btn-outline-dark">Edit</button></Link></td>
+    <td><Link to={`/AttributionImp/${d.id}`}><button className="btn btn-outline-dark">Imprimer</button></Link></td>
     </tr>
   ))
 }

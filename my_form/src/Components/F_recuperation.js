@@ -9,6 +9,7 @@ import { useState, useEffect } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import RecupRow from './layout/RecupRow';
+import img from "../images/qbm.png";
 
 function F_recuperation() {
   
@@ -89,7 +90,7 @@ function F_recuperation() {
     axios.delete(`http://localhost:8080/recupemps/${arraysids}`).then(data => {
       console.log(data);
       getemployer();
-    }).catch(err => alert("Veuiller Selectioner une Recuperation"));
+    }).catch(err => toast.warning('Veuiller Selectioner une Recuperation'));
   };
   const handleSubmit = () => {
     // event.preventDefault();
@@ -108,6 +109,41 @@ function F_recuperation() {
 
   return (
     <div>
+      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+    <img href=""/>
+  {/* <a className="navbar-brand">MY FORM</a> */}
+  <button 
+  className="navbar-toggler"
+  type="button" 
+  data-toggle="collapse" 
+  data-target="#navbarSupportedContent" 
+  aria-controls="navbarSupportedContent" 
+  aria-expanded="false" 
+  aria-label="Toggle navigation">
+  <span className="navbar-toggler-icon"> </span>
+  </button>
+
+  <div className="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul className="navbar-nav mr-auto">
+      <li className="nav-item active">
+        {/* <a className="nav-link" href="/">Home <span className="sr-only">(current)</span></a> */}
+        <a className="nav-link" href="/"><img src={img} alt="My Image" className="top-left-image" style={{ width: '100px', height: 'auto' }} /></a>
+
+      </li>
+      {/* <li className="nav-item">
+        <a className="nav-link" href="../../component/customer/Customerrow">Employer</a>
+      </li> */}
+  </ul>
+
+    {/* <form className="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form> */}
+  </div>
+  <div className="navbar-right">
+    <a href="#" className="navbar-link"><strong>Chercher</strong></a>
+  </div>
+  </nav>
       <div className="F_attribution">
     <header className="F_attribution">
     </header>
@@ -168,9 +204,9 @@ function F_recuperation() {
     );
       }}/> </th>
       <th scope="col">Nom et Prenom</th>
-      <th scope="col">Materiel	</th>
+      <th scope="col">Matériel	</th>
       <th scope="col">Type</th>
-      <th scope="col">Numero de serie</th>
+      <th scope="col">Numéro de serie</th>
       <th scope="col">Remarques</th>
       <th scope="col">Departement</th>
       <th scope="col">Date</th>

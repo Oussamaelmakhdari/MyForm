@@ -34,18 +34,18 @@ function AddRecupereur() {
 const postemployer=(data)=>{
     axios.post("http://localhost:8080/recupemp", data).then((d)=>{
     console.log(d);
-    }).catch(err=>alert("S'il vous Plait remplir tout les champs !!")); 
+    }).catch(err=> toast.warning(' Veuiller Remplir tous Les champs')); 
 }
 
 const handleSubmit = (event) => {
     event.preventDefault();
-    if ( (event.target[0].value !== "" )||
-    (event.target[1].value !== "" ) ||
-    (event.target[2].value !== "" ) ||
-    (event.target[3].value !== "" ) ||
-    (event.target[4].value !== "" ) ||
-    (event.target[5].value !== "" ) ||
-    (event.target[5].value !== "" )
+    if ( (event.target[0].value !== "" ) &&
+    (event.target[1].value !== "" ) &&
+    (event.target[2].value !== "" ) &&
+    (event.target[3].value !== "" ) &&
+    (event.target[4].value !== "" ) &&
+    (event.target[5].value !== "" ) &&
+    (event.target[6].value !== "" )
     ) {
         toast.success('Recuperation Ajouter avec succes', {
             position: toast.POSITION.TOP_CENTER
@@ -97,7 +97,7 @@ const handleSubmit = (event) => {
             <input type="text" className="form-control form-control-sm" placeholder="Entrer "/>
         </div>
         <div className="form-group">
-            <label ><strong>Numero de serie</strong></label>
+            <label ><strong>Numéro de serie</strong></label>
             <input type="text" className="form-control form-control-sm" placeholder="Entrer "/>
         </div>
         <div className="form-group">
@@ -134,5 +134,7 @@ const handleSubmit = (event) => {
   )   
   
 }
+
+
 
 export default AddRecupereur

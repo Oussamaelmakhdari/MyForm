@@ -62,6 +62,7 @@ function EditRecupereur() {
 
   return (
     <div className='container my-3'>
+        
         <form onSubmit={e=>
         {e.preventDefault();
             putEmployer(e);
@@ -230,7 +231,7 @@ function EditRecupereur() {
                         
             } className="form-control form-control-sm"/>
         </div>
-        <button type="submit" className="btn btn-primary btn-sm">Editer</button>
+        <button type="submit" className="btn btn-success">Editer</button>
         </form>
         <ToastContainer />
       

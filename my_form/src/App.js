@@ -8,6 +8,8 @@ import Editemployer from './Components/EditEmployer/Editemployer';
 import EditRecupereur from './Components/EditEmployer/EditRecupereur';
 import AddRecupereur from './Components/AddEmployers/AddRecupereur';
 import RecuImp from './Components/Impression/RecuImp';
+import Login from './Components/Authentification/Login';
+import Register from './Components/Authentification/Register';
 import React from 'react';
 import Header from './Components/layout/Header';
   
@@ -15,9 +17,11 @@ function App() {
   
   return (
     <div className="App">
-      <Header/>
+      {/* <Header/> */}
       <Router>
+      
         <Routes>
+        
           <Route path="/" element={<Home/>}/>
           <Route path="/F_attribution" element={<F_attribution/>}/>
           <Route path="/F_recuperation" element={<F_recuperation/>}/> 
@@ -29,10 +33,17 @@ function App() {
           <Route path="/addrecup" element={<AddRecupereur/>}/>
           <Route path="/editAtt/:id" element={<Editemployer/>}/>
           <Route path="/editrecup/:id" element={<EditRecupereur/>}/>
+
+          <Route path="/Login" element={<Login/>}/>
+          <Route path="/Register" element={<Register/>}/>
         </Routes>
-      </Router>       
+        
+          
+      </Router> 
+
+     
+            
     </div>
-    
   );
 }
 

@@ -202,7 +202,12 @@ function RecuImp() {
       <p className="paragc"><p className="parg"><strong>Responsable Département</strong></p>       <p className="parg"><strong>Bénéficiaire </strong></p>
       </p> 
       */}
-
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
       </div> 
      </div>
      {/* <button variant='success' className="recub" onClick={handleprint}> Imprimer </button>  */}

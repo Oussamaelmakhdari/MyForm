@@ -32,8 +32,8 @@ function RecupRow(props) {
         <td>{d.mp}</td>
 
     
-        <td><Link to={`/editrecup/${d.id}`}><button className="btn btn-primary btn-sm">Edit</button></Link></td>
-        <td><Link to={`/RecuImp/${d.id}`}><button className="btn btn-primary btn-sm">Imprimer</button></Link></td>
+        <td><Link to={`/editrecup/${d.id}`}><button className="btn btn-outline-dark">Edit</button></Link></td>
+        <td><Link to={`/RecuImp/${d.id}`}><button className="btn btn-outline-dark">Imprimer</button></Link></td>
         </tr>
       ))
 }

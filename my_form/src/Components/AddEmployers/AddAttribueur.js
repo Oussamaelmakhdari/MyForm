@@ -28,7 +28,7 @@ function AddAttribueur() {
     const postemployer=(data)=>{
         axios.post("http://localhost:8080/employer", data).then((d)=>{
         console.log(d);
-        }).catch(err=>alert("S'il vous Plait remplir tout les champs !!")); 
+        }).catch(err=>toast.warning('Veuiller Remplir tous Les champs')); 
     }
 
     const handleSubmit = (event) => {
@@ -41,7 +41,7 @@ function AddAttribueur() {
         (event.target[3].value !== "" ) ||
         (event.target[4].value !== "" ) ||
         (event.target[5].value !== "" ) ||
-        (event.target[5].value !== "" )
+        (event.target[6].value !== "" )
         ) {
             toast.success('Bénéficiaire  Ajouter avec succes', {
             position: toast.POSITION.TOP_CENTER
@@ -89,7 +89,7 @@ function AddAttribueur() {
             <input type="text" className="form-control form-control-sm" placeholder="Entrer "/>
         </div>
         <div className="form-group">
-            <label ><strong>Numero de serie</strong></label>
+            <label ><strong>Numéro de serie</strong></label>
             <input type="text" className="form-control form-control-sm" placeholder="Entrer "/>
         </div>
         <div className="form-group">
@@ -117,7 +117,7 @@ function AddAttribueur() {
             <label > <strong>Date</strong></label>
             <input type="text" className="form-control form-control-sm" placeholder="aaaa-mm-jj"/>
         </div>
-        <button type="submit" value='submit' className="btn btn-primary btn-sm">Ajouter</button>
+        <button type="submit" value='submit' className="btn btn-success">Ajouter</button>
       </form>
       <ToastContainer />
     </div>

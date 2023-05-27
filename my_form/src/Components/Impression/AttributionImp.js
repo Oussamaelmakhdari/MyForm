@@ -196,6 +196,12 @@ function AttributionImp() {
       <br/>
       <p className="paragc"><p className="parg"><strong>Responsable Département</strong></p>       <p className="parg"><strong>Bénéficiaire </strong></p>
       </p>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
       </div> 
      </div>
      {/* <button  className="recub" > Imprimer </button>  */}
