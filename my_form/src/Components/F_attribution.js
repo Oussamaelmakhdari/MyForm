@@ -86,7 +86,7 @@ function F_attribution() {
     <ul className="navbar-nav mr-auto">
       <li className="nav-item active">
         {/* <a className="nav-link" href="/">Home <span className="sr-only">(current)</span></a> */}
-        <a className="nav-link" href="/"><img src={img} alt="My Image" className="top-left-image" style={{ width: '100px', height: 'auto' }} /></a>
+        <a className="nav-link" href="/home"><img src={img} alt="My Image" className="top-left-image" style={{ width: '100px', height: 'auto' }} /></a>
 
       </li>
       {/* <li className="nav-item">
@@ -100,7 +100,8 @@ function F_attribution() {
     </form> */}
   </div>
   <div className="navbar-right">
-    <a href="#" className="navbar-link"><strong>Chercher</strong></a>
+    <a href="/SearchAtt" className="navbar-link"><strong>Chercher</strong></a>
+    <a href="/" class="navbar-link">Deconnexion</a>
   </div>
   </nav>
   {/* <div className=".container-sb" style={{padding:'1rem'}}>

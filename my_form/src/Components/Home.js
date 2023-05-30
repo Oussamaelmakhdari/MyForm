@@ -35,7 +35,7 @@ function Home() {
     <ul className="navbar-nav mr-auto">
       <li className="nav-item active">
         {/* <a className="nav-link" href="/">Home <span className="sr-only">(current)</span></a> */}
-        <a className="nav-link" href="/"><img src={img} alt="My Image" className="top-left-image" style={{ width: '100px', height: 'auto' }} /></a>
+        <a className="nav-link" href="/home"><img src={img} alt="My Image" className="top-left-image" style={{ width: '100px', height: 'auto' }} /></a>
 
       </li>
       {/* <li className="nav-item">
@@ -49,7 +49,8 @@ function Home() {
     </form> */}
   </div>
   <div class="navbar-right">
-    <a href="#" class="navbar-link">Chercher</a>
+    {/* <a href="#" class="navbar-link"><strong>Chercher</strong></a> */}
+    <a href="/" class="navbar-link">Deconnexion</a>
   </div>
   </nav>
     <header className="Home-header">
@@ -60,13 +61,14 @@ function Home() {
     </header>
     
       <div>
-        <Navigate to="/"/>
+        <Navigate to="/home"/>
       <Link to="/F_attribution"><button className="button" >Formulaire d'attribution du matériel</button> </Link>   <Link to="/F_recuperation"> <button className="button">Formulaire de récupération du matériel</button></Link>
       </div>
       <div className="Footer"></div>
     </div>
   );
 }
+
 
 
 

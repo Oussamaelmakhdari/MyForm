@@ -127,7 +127,7 @@ const handleSubmit = (event) => {
             <label ><strong>Mot de Passe </strong></label>
             <input type="text" className="form-control form-control-sm" placeholder="Entrer "/>
         </div>
-        <button type="submit" value='submit' className="btn btn-primary btn-sm">Ajouter</button>
+        <button type="submit" value='submit' className="btn btn-success">Ajouter</button>
       </form>
       <ToastContainer />
     </div>

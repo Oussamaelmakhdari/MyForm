@@ -12,6 +12,8 @@ import Login from './Components/Authentification/Login';
 import Register from './Components/Authentification/Register';
 import React from 'react';
 import Header from './Components/layout/Header';
+import SearchAtt from './Components/Search/SearchAtt';
+import SearchRecup from './Components/Search/SearchRecup';
   
 function App() {
   
@@ -21,9 +23,10 @@ function App() {
       <Router>
       
         <Routes>
-        
-          <Route path="/" element={<Home/>}/>
-          <Route path="/F_attribution" element={<F_attribution/>}/>
+          <Route exact path="/" element={<Login/>}/>
+
+          <Route exact path="/home" element={<Home/>}/>
+          <Route exact path="/F_attribution" element={<F_attribution/>}/>
           <Route path="/F_recuperation" element={<F_recuperation/>}/> 
 
           <Route path="/AttributionImp/:id" element={<AttributionImp/>}/> 
@@ -34,8 +37,12 @@ function App() {
           <Route path="/editAtt/:id" element={<Editemployer/>}/>
           <Route path="/editrecup/:id" element={<EditRecupereur/>}/>
 
-          <Route path="/Login" element={<Login/>}/>
-          <Route path="/Register" element={<Register/>}/>
+          <Route path="/searchAtt" element={<SearchAtt/>}/>
+          <Route path="/searchRecup" element={<SearchRecup/>}/>
+
+
+
+          {/* <Route path="/Register" element={<Register/>}/> */}
         </Routes>
         
           

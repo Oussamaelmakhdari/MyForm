@@ -30,6 +30,8 @@
 
 .Home-header{
   margin-bottom: 200px;
+  padding-bottom: 10rem;
+  
 }
 .Home-header h1 {
   text-align: center;
@@ -704,12 +706,31 @@ button.print-button:hover .print-icon::after {
   transition: 0.5s;
   text-decoration: none;
   padding-right: 1rem;
-
 }
 
 .navbar-link:hover {
   color: rgb(26, 87, 26);
-  text-shadow:  rgb(26, 87, 26);
-  
+  text-shadow:  rgb(26, 87, 26);  
   text-decoration: none;
+}
+.qbm{
+text-align: center;
+  text-transform: uppercase;
+  color: #4CAF50;
+}
+
+/* search */
+.home-main {
+  
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("https://images.unsplash.com/photo-1550949987-33f716ccc232?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1308&q=80"); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  padding: 0px 0 500px 0;
+  height: 750px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
